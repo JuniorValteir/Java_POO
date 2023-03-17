@@ -63,10 +63,7 @@ public class Persona {
 
 
 public class MethPersona  {
-    
-    
-    
-    
+       
     public float calculateIMC(Persona p){
         
         float IMC = p.getWeigth()/ (float)Math.pow(p.getHeigth(), 2);
