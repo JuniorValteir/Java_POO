@@ -32,28 +32,62 @@ package ExercisesJavaPoo;
 
 public class Persona {
     
-    double weigth,heigth;
-    
-    public double calculateIMC(){
+    public Persona(){
         
-        double IMC = weigth/Math.pow(heigth, 2);
+    }        
+    private float weigth,heigth;
+    
+    public void setWeigth(float weigth){
+        this.weigth = weigth;
+    }
+    
+    public float getWeigth(){
+        return weigth;
+    }
+    public void setHeigth(float heigth){
+        this.heigth = heigth;   
+    }
+    
+    public float getHeigth(){
+        return heigth;
+    }
+    
+    
+    
+    
+}
+```
+#### MethPersona Class
+```
+ package ExercisesJavaPoo;
+
+
+public class MethPersona  {
+    
+    
+    
+    
+    public float calculateIMC(Persona p){
+        
+        float IMC = p.getWeigth()/ (float)Math.pow(p.getHeigth(), 2);
         return IMC;
     }
-    public String levelIMC(){
+    public String levelIMC(float IMC){
         String level= "";
-        if(calculateIMC()<=18.5){
+        
+        if(IMC<=18.5){
             
             level = "Thinness";
             
-        }else if(calculateIMC()>18.5 && calculateIMC()<=24.9){
+        }else if(IMC>18.5 && IMC<=24.9){
         
             level = "Normal";
               
-         }else if(calculateIMC()>24.9 && calculateIMC()<=29.9){
+         }else if(IMC>24.9 && IMC<=29.9){
         
             level = "Overweigth";
               
-         }else if(calculateIMC()>29.9 && calculateIMC()<=39.9){
+         }else if(IMC>29.9 && IMC<=39.9){
         
             level = "Obesity";
               
@@ -62,4 +96,5 @@ public class Persona {
     }
     
 }
+
 ```
